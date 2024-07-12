@@ -2,4 +2,3 @@ streamlit
 seleniumbase
 webdriver-manager
 requests
-threading
