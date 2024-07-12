@@ -42,13 +42,15 @@ with st.echo():
 
     driver = get_driver()
     driver.get('https://x.com/i/flow/login/')
-    sleep(4)
+    sleep(10)
+    st.text("on login page")
     username = driver.find_element("name", "text")
     username.click()
     username.send_keys('retiredHippo')
     next=driver.find_element("xpath", '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/button[2]')
     next.click()
-    sleep(3)
+    sleep(10)
+    st.text("given username")
 
 
     password = driver.find_element("name", "password")
@@ -58,8 +60,9 @@ with st.echo():
 
     signin=driver.find_element("xpath", '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[1]/div/div/button')
     signin.click()
+    st.text("given password")
 
-    sleep(3)
+    sleep(10)
 
     for i in range(30):
         st.text(i)
@@ -72,7 +75,7 @@ with st.echo():
         requests.get(url).json()
 
         driver.get('https://x.com/DaoKwonDo/')
-        sleep(4)
+        sleep(10)
         prof=driver.find_element("xpath", '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[3]/div/div/div/div/div[1]/div[1]/div[2]/div/div[2]/div[1]/a')
         
         message = prof.get_attribute("href")
