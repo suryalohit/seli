@@ -46,7 +46,11 @@ with st.echo():
     print(liv.text)
     for i in range(10):
         st.text(i)
+        message = i
+        url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
+        requests.get(url).json()
         liv=driver.find_element("xpath", '//*[@id="cb-main-menu"]/a[2]')
+      
         st.text(liv.text)
         
         sleep(1.5)
