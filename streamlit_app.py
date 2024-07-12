@@ -1,4 +1,5 @@
 import streamlit as st
+from time import sleep
 
 """
 ## Web scraping on Streamlit Cloud with Selenium
@@ -34,6 +35,9 @@ with st.echo():
     driver.get("https://www.cricbuzz.com/")
     liv=driver.find_element("xpath", '//*[@id="cb-main-menu"]/a[2]')
     print(liv.text)
+    for i in range(10):
+        print(i)
+        sleep(1.5)
     st.text(liv.text)
 
     st.code(driver.page_source)
