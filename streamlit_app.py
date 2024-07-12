@@ -31,6 +31,9 @@ with st.echo():
     options.add_argument("--headless")
 
     driver = get_driver()
-    driver.get("http://example.com")
+    driver.get("https://www.cricbuzz.com/")
+    liv=driver.find_element("xpath", '//*[@id="cb-main-menu"]/a[2]')
+    print(liv.text)
+    st.text(liv.text)
 
     st.code(driver.page_source)
