@@ -53,6 +53,9 @@ with st.echo():
         message = threading.get_ident()
         url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
         requests.get(url).json()
+        message = liv.text
+        url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
+        requests.get(url).json()
         
         liv=driver.find_element("xpath", '//*[@id="cb-main-menu"]/a[2]')
       
