@@ -1,3 +1,4 @@
+
 import streamlit as st
 from time import sleep
 import threading
@@ -43,6 +44,7 @@ with st.echo():
     driver = get_driver()
     driver.get('https://x.com/i/flow/login/')
     sleep(10)
+    st.text(driver.page_source)
     st.text("on login page")
     username = driver.find_element("name", "text")
     username.click()
