@@ -38,6 +38,7 @@ with st.echo():
     print(liv.text)
     for i in range(10):
         st.text(i)
+        liv=driver.find_element("xpath", '//*[@id="cb-main-menu"]/a[2]')
         st.text(liv.text)
         
         sleep(1.5)
