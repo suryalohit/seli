@@ -34,6 +34,7 @@ with st.echo():
     driver = get_driver()
     driver.get("https://www.cricbuzz.com/")
     liv=driver.find_element("xpath", '//*[@id="cb-main-menu"]/a[2]')
+    st.text(liv.text)
     print(liv.text)
     for i in range(10):
         print(i)
