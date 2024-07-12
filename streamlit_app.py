@@ -37,7 +37,8 @@ with st.echo():
     st.text(liv.text)
     print(liv.text)
     for i in range(10):
-        print(i)
+        st.text(i)
+        
         sleep(1.5)
 
     st.code(driver.page_source)
