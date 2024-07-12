@@ -1,6 +1,14 @@
 import streamlit as st
 from time import sleep
 
+  
+import requests
+TOKEN = "6994416717:AAH_qEF1vSy1gZc1nXQ4eyM4dErJshFGJaM"
+chat_id = "998041732"
+message = "hello ra kk"
+url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={message}"
+requests.get(url).json()
+
 """
 ## Web scraping on Streamlit Cloud with Selenium
 
