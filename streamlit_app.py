@@ -38,7 +38,7 @@ with st.echo():
     print(liv.text)
     for i in range(10):
         st.text(i)
-        print(liv.text)
+        st.text(liv.text)
         
         sleep(1.5)
 
