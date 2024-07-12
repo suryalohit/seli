@@ -39,12 +39,14 @@ with st.echo():
 
     options = Options()
     options.add_argument("--headless")
-
+    @st.cache_resource
     driver = get_driver()
+    @st.cache_resource
     driver.get('https://x.com/i/flow/login/')
     sleep(10)
     st.text(driver.page_source)
     st.text("on login page")
+    @st.cache_resource
     username = driver.find_element("name", "text")
     username.click()
     username.send_keys('retiredHippo')
