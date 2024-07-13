@@ -43,10 +43,7 @@ with st.echo():
     driver = get_driver()
    
     driver.get('https://x.com/i/flow/login/')
-    driver.save_screenshot('screenie.png')
-    sleep(10)
-    st.text(driver.page_source)
-    st.text("on login page")
+    sleep(5)
    
     username = driver.find_element("xpath", '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[4]/label/div/div[2]/div/input')
     username.click()
