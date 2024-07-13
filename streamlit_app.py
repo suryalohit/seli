@@ -44,7 +44,7 @@ with st.echo():
    
     driver.get('https://x.com/i/flow/login/')
     sleep(5)
-   
+    driver.save_screenshot("my_screenshot.png")
     username = driver.find_element("xpath", '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[4]/label/div/div[2]/div/input')
     username.click()
     username.send_keys('retiredHippo')
