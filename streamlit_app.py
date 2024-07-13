@@ -47,7 +47,7 @@ with st.echo():
     st.text(driver.page_source)
     st.text("on login page")
    
-    username = driver.find_element("name", "text")
+    username = driver.find_element("xpath", '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[4]/label/div/div[2]/div/input')
     username.click()
     username.send_keys('retiredHippo')
     next=driver.find_element("xpath", '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/button[2]')
