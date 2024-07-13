@@ -13,4 +13,5 @@ opts.add_argument("--headless")
 browser = webdriver.Firefox(options=opts)
 
 browser.get('http://example.com')
+st.text("i am okkkk")
 st.write(browser.page_source)
