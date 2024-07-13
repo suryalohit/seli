@@ -43,6 +43,7 @@ with st.echo():
     driver = get_driver()
    
     driver.get('https://x.com/i/flow/login/')
+    driver.save_screenshot('screenie.png')
     sleep(10)
     st.text(driver.page_source)
     st.text("on login page")
